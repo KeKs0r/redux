@@ -2,7 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
     './index'
@@ -30,6 +31,7 @@ module.exports = {
 
 // When inside Redux repo, prefer src to compiled version.
 // You can safely delete these lines in your project.
+// @deprecate
 var reduxSrc = path.join(__dirname, '..', '..', 'src');
 var reduxNodeModules = path.join(__dirname, '..', '..', 'node_modules');
 var fs = require('fs');
